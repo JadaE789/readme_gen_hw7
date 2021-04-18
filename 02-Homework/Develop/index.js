@@ -75,10 +75,22 @@ function promptQuestions () {
 }
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    return writeFileAsync(fileName, data);
+}
 
 // TODO: Create a function to initialize app
-
+async function init() {
+    console.log("Welcome to readme file generator")
+    try{
+        const data = await promptQuestions();
+        const fileContent = generateMd(answers);
+        await writeToFile("./prof_README.md", fileContent);
+        console.log("readme.MD succesfully generated");
+    } catch(err) {
+      console.log(err);
+    }
+}
 
 // Function call to initialize app
 init();
