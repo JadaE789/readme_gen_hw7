@@ -34,7 +34,6 @@ const questions = [
             "MIT",
             "Unlicensed"
         ],
-        default: 2
     },
     {
         type: "input",

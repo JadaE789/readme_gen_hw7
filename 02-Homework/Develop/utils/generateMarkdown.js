@@ -11,7 +11,6 @@ function generateMarkdown(data) {
 
   * [Project Description](#project-description)
   * [Installation](#installation)
-  * [Usage](#usage)
   * [License](#license)
   * [Contributing](#contributing)
   * [Demo Video](#Project-Demo-Video)
@@ -24,10 +23,6 @@ function generateMarkdown(data) {
   ## Installation
   
   ${data.installation}
-  
-  ## Usage
-  
-  ${data.usage}
   
   ## License
   

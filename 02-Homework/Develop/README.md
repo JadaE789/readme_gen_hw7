@@ -6,7 +6,6 @@
 
   * [Project Description](#project-description)
   * [Installation](#installation)
-  * [Usage](#usage)
   * [License](#license)
   * [Contributing](#contributing)
   * [Demo Video](#Project-Demo-Video)
@@ -14,15 +13,11 @@
   
   ## Project Description
   
-  This project is a command line application that automatically generates a professional README markdown file for a repository based on answers from the user. When the application runs, it presents a series of prompts to the user to fill in sections in the README. Then the README markdown file with the user information is saved
+  This project is a command line application that automatically generates a professional README markdown file for a repo based on answers from the user. When the application runs, it presents a series of questions to the user to fill in sections in the README. Then the README markdown file with the user information is saved and created.
   
   ## Installation
   
   npm i
-  
-  ## Usage
-  
-  undefined
   
   ## License
   
@@ -34,11 +29,11 @@
   
   ## Project Demo Video
   
-  N/A
+  https://drive.google.com/file/d/1sn0EA7ymXI-LVkEFkzaJTRagA6eb9Yt4/view
   
   ## Questions
   
-  please feel free to ask me any questions.
+  Feel free to ask me any questions.
   
   Github username: JadaE789
   
