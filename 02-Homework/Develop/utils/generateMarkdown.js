@@ -33,8 +33,6 @@ function generateMarkdown(data) {
   
   This project is under ${data.license} for licensing.
   
-  ${licenseBadge}
-  
   ## Contributing
   
   ${data.contribute}
@@ -45,7 +43,7 @@ function generateMarkdown(data) {
   
   ## Questions
   
-  please feel free to ask me any questions.
+  Feel free to ask me any questions.
   
   Github username: ${data.username}
   

@@ -1,5 +1,5 @@
 // TODO: Include packages needed for this application
-const generateMarkdown = require("./utils/generateMarkdown.js");
+const generateMarkdown = require("./utils/generateMarkdown");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
@@ -7,8 +7,7 @@ const util = require("util");
 const writeFileAsync = util.promisify(fs.writeFile);
 
 // TODO: Create an array of questions for user input
-function promptQuestions () {
-  return inquirer.prompt ([
+const questions = [
     {
         type: "input",
         name: "title",
@@ -71,27 +70,43 @@ function promptQuestions () {
             return true;
         }
     }
-  ]);
+
+]
+
+// function to prompt user - returns answers object
+const promptUser = () => {
+    return inquirer
+        .prompt(questions);
 }
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+// function to write README file
+const writeToFile = (fileName, data) => {
     return writeFileAsync(fileName, data);
 }
 
 // TODO: Create a function to initialize app
-async function init() {
-    console.log("Welcome to readme file generator")
-    try{
-        const data = await promptQuestions();
-        const fileContent = generateMd(answers);
-        await writeToFile("prof_README.md", fileContent);
-        console.log("readme.MD succesfully generated");
-    } catch(err) {
-        console.error("Error creating README. File not created.")
-      console.log(err);
+const init = async () => {
+    try {
+        console.log("Welcome to the README generator")
+
+        // ask user for answers to questions
+        const answers = await promptUser();
+
+        // create markdown content from user answers
+        const fileContent = generateMarkdown(answers);
+
+        // write markdown content to README.md file
+        await writeToFile("./README.md", fileContent);
+
+        // notify user that file has been written
+        console.log("README.md created");
+
+    } catch (err) {
+        console.error("Error creating README. File not created.");
+        console.log(err);
     }
 }
+
 
 // Function call to initialize app
 init();
