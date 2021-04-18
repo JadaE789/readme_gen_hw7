@@ -1,9 +1,11 @@
-//License
-
+const licenseBadgeLinks = require("./licenseBadges");
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  data.licenseBadge = licenseBadgeLinks[data.license];
   return `# ${data.title}
+
+  ${data.licenseBadge}
 
   ## Table of Contents
 
@@ -31,7 +33,7 @@ function generateMarkdown(data) {
   
   This project is under ${data.license} for licensing.
   
-  ${badge}
+  ${licenseBadge}
   
   ## Contributing
   

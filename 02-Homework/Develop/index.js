@@ -85,9 +85,10 @@ async function init() {
     try{
         const data = await promptQuestions();
         const fileContent = generateMd(answers);
-        await writeToFile("./prof_README.md", fileContent);
+        await writeToFile("prof_README.md", fileContent);
         console.log("readme.MD succesfully generated");
     } catch(err) {
+        console.error("Error creating README. File not created.")
       console.log(err);
     }
 }
