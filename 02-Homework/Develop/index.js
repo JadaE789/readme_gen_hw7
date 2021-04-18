@@ -78,19 +78,7 @@ function promptQuestions () {
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-async function init() {
-    console.log("Welcome to readme file generator")
-    try{
-        const data = await promptQuestions();
-        const license = data.license;
-        const badge = await renderBadge(license);
-        const readme = generateMarkdown(data);
-        await writeFileAsync("Prof_ReadMe.md",readme);
-        console.log("readme.MD succesfully generated");
-    } catch(err) {
-      console.log(err);
-    }
-}
+
 
 // Function call to initialize app
 init();
